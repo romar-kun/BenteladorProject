@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                    
+                height: 100%;
+                width: 100%;
+                background-image: url("bg.jpg");
+                
+                background-size: cover;
+                
+                
+            }
+            #circ{
+                position: absolute;
+                z-index: 2;
+                height: 50%;
+                width: 90%;
+                display: block;
+                margin: 0;
+               
+            }
+            #windy{
+                transform: scaleX(-1);
+                visibility: hidden;
+                position: absolute;
+                height: 50%;
+                width: 100%;
+                z-index: 3;
+                opacity: 0.8;
+                animation: ww 0.1s infinite ease-in-out;
+                
+            }
+            #rot{
+                animation: ani 100s infinite linear;
+                height: 50%;
+                width: 90%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto; 
+                margin-top: 200px; 
+
+                position: relative;
+                z-index: 1;
+            }
+            
+            
+            @keyframes ani{
+            from{
+                transform:rotate(0deg);
+            }
+            to{
+                transform:rotate(359deg);
+            }
+            }
+
+            @keyframes ww{
+            from{
+                transform:rotate(0deg);
+                
+            }
+            to{
+                transform:rotate(359deg);
+                transform: scale(2);
+                opacity: 0.3;
+            }
+            }
+            button{
+                height: 100px;
+                width: 150px;
+                font-size: 50px;
+                margin: 10px;
+                border-radius: 20%;
+                box-shadow: 0 10px #999;
+                background-color: #f4511e;
+            }
+            button:active {
+  background-color: #d14318;
+  box-shadow: 0 5px #666;
+  
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}         
+
+                       
+        </style>
+    </head>
+    <body>
+        
+            
+        
+        <img src="wendd.png" alt="wind" id="windy">
+        <img src="fannerr1.png" alt="fan" id="rot">
+        
+        <br>
+        <div style="display: flex;align-items: center;justify-content: center;margin-top: 100px;">
+        <button onclick="speed0()" >0</button>
+        <button onclick="speed1(), wind()">1</button>
+        <button onclick="speed2(), wind()">2</button>
+        <button onclick="speed3(), wind()">3</button>
+
+        </div>
+        
+    </body>
+    <script>
+         function speed0(){
+            document.getElementById("rot").style.animationDuration = "100s";
+            document.getElementById("rot").src= "fannerr1.png";
+        }
+        function speed1(){
+            document.getElementById("rot").style.animationDuration = "1s";
+            document.getElementById("rot").src= "fannerr.png";
+        }
+        function speed2(){
+            document.getElementById("rot").style.animationDuration = "0.6s";
+            document.getElementById("rot").src= "fannerr.png";
+        }
+        function speed3(){
+            document.getElementById("rot").style.animationDuration = "0.2s";
+            document.getElementById("rot").src= "fannerr.png";  
+        }
+
+        function wind(){
+            document.getElementById("windy").style.visibility = "visible";
+            setTimeout("timeOut()", 1000);
+        }
+         function timeOut(){
+             document.getElementById("windy").style.visibility = "hidden";
+         }
+        
+
+       
+        
+    </script>
+</html>

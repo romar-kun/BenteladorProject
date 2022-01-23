@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+    <title></title>   
+    <style>
+        body{
+            height: 100%;
+        }
+        .imagePos{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+        }
+        .load{
+            position: relative;
+            margin-top: 25vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .txt{
+            text-align: center;
+            position: relative;
+            margin-top: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 50px;
+            font-family: cursive;
+        }
+        
+    </style>    
+    </Head>
+    <body>
+        <div class="imagePos">
+            <img src="am2.gif" alt="">
+
+        </div>
+        
+        <div class="load">
+            <img src="load.gif" alt=""><br>
+            
+        </div>
+        <div class="txt">
+            <span>Loading...</span>
+            
+        </div>
+        
+    </body>
+
+    <script>
+        function red(){
+            window.location.href = "jj.html";
+        }
+        setTimeout(red, 3000);
+    </script>
+</html>
